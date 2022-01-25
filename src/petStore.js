@@ -1,5 +1,5 @@
-import { action, makeObservable, observable } from 'mobx';
-import petsData from './petsData';
+import { action, makeObservable, observable } from "mobx";
+import petsData from "./petsData";
 class PetStore {
   pets = petsData;
 
@@ -9,6 +9,11 @@ class PetStore {
       handleAdopt: action,
     });
   }
+
+  addPet = (pet) => {
+    pet.id = this.pets[this.pets.length - 1].id + 1;
+    this.pets.push(pet);
+  };
 
   handleAdopt = (petId) => {
     this.pets = this.pets.filter((pet) => pet.id !== petId);
