@@ -1,3 +1,4 @@
+// Primary App
 import "./App.css";
 import "./assets/css/animate.css";
 import "./assets/css/bootstrap-5.0.0-beta2.min.css";
