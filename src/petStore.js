@@ -15,6 +15,13 @@ class PetStore {
     this.pets.push(pet);
   };
 
+  updatePet = (updatedPet) => {
+    this.pets = this.pets.map((pet) =>
+      pet.id === updatedPet.id ? updatedPet : pet
+    );
+    console.log(this.pets);
+  };
+
   handleAdopt = (petId) => {
     this.pets = this.pets.filter((pet) => pet.id !== petId);
   };

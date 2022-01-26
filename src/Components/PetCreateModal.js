@@ -16,7 +16,6 @@ const PetCreateModal = () => {
     event.preventDefault();
     petStore.addPet(petInfo);
     handleClose();
-    console.log("sub");
   };
 
   const handleChange = (event) => {
@@ -34,7 +33,7 @@ const PetCreateModal = () => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>Create A Pet</Modal.Title>
         </Modal.Header>
         <Form onSubmit={prevSubmit}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
